@@ -1,1 +1,37 @@
-<p>dashboard works!</p>
+<section class="chart-section">
+  <header>Temperatur</header>
+
+  <div class="chart temperatur">
+    <tui-arc-chart
+      [value]="[22, 20, 24]"
+      [size]="'l'"
+      [max]="40"
+      [maxLabel]="'40°C'"
+      [minLabel]="'0°C'"
+    >
+    </tui-arc-chart>
+    <div class="badges">
+      <tui-badge
+        status="custom"
+        size="l"
+        value="Wohnzimmer"
+        class="tui-space_horizontal-2 tui-space_vertical-2 support-livingroom"
+        [hoverable]="true"
+      ></tui-badge>
+      <tui-badge
+        status="custom"
+        size="l"
+        value="Büro"
+        class="tui-space_horizontal-2 tui-space_vertical-2 support-office"
+        [hoverable]="true"
+      ></tui-badge>
+      <tui-badge
+        size="l"
+        status="custom"
+        value="Schlafzimmer"
+        class="tui-space_horizontal-2 tui-space_vertical-2 support-bedroom"
+        [hoverable]="true"
+      ></tui-badge>
+    </div>
+  </div>
+</section>

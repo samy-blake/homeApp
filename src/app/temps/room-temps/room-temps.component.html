@@ -1,0 +1,51 @@
+<section class="chart-section">
+  <header>Aktuell</header>
+
+  <div class="chart">
+    <tui-arc-chart
+      [value]="[roomTempData.activeTemp || 0]"
+      [size]="'l'"
+      [max]="40"
+      [maxLabel]="'40°C'"
+      [minLabel]="'0°C'"
+    >
+      {{ roomTempData.activeTemp }}°C
+    </tui-arc-chart>
+  </div>
+</section>
+
+<section class="chart-section">
+  <header>Woche</header>
+
+  <div class="chart">
+    <tui-axes class="axes" [horizontalLines]="2" [verticalLines]="4">
+      <tui-line-chart
+        [filled]="true"
+        [height]="200"
+        [smoothingFactor]="50"
+        [value]="roomTempData.weeklyTemp || []"
+        [width]="weekChartWidth"
+        [x]="0"
+        [y]="0"
+      ></tui-line-chart>
+    </tui-axes>
+  </div>
+</section>
+
+<section class="chart-section">
+  <header>Jahr</header>
+
+  <div class="chart">
+    <tui-axes class="axes" [horizontalLines]="2" [verticalLines]="4">
+      <tui-line-chart
+        [filled]="true"
+        [height]="200"
+        [smoothingFactor]="50"
+        [value]="roomTempData.yearTemp || []"
+        [width]="weekChartWidth"
+        [x]="0"
+        [y]="0"
+      ></tui-line-chart>
+    </tui-axes>
+  </div>
+</section>

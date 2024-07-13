@@ -1,1 +1,47 @@
-<p>temps works!</p>
+<section class="chart-section">
+  <header>Wohnzimmer</header>
+
+  <tui-arc-chart
+    [value]="[roomTemps['livingroom'].activeTemp || 0]"
+    [size]="'l'"
+    [max]="40"
+    [maxLabel]="'40°C'"
+    [minLabel]="'0°C'"
+  >
+    {{ roomTemps["livingroom"].activeTemp }}°C
+  </tui-arc-chart>
+  <a [routerLink]="['/temps', 'livingroom']">
+    <tui-svg src="tuiIconExternalLinkLarge"></tui-svg>
+  </a>
+</section>
+<section class="chart-section">
+  <header>Büro</header>
+  <tui-arc-chart
+    [value]="[roomTemps['office'].activeTemp || 0]"
+    [size]="'l'"
+    [max]="40"
+    [maxLabel]="'40°C'"
+    [minLabel]="'0°C'"
+  >
+    {{ roomTemps["office"].activeTemp }}°C
+  </tui-arc-chart>
+  <a [routerLink]="['/temps', 'office']">
+    <tui-svg src="tuiIconExternalLinkLarge"></tui-svg>
+  </a>
+</section>
+
+<section class="chart-section">
+  <header>Schlafzimmer</header>
+  <tui-arc-chart
+    [value]="[roomTemps['bedroom'].activeTemp || 0]"
+    [size]="'l'"
+    [max]="40"
+    [maxLabel]="'40°C'"
+    [minLabel]="'0°C'"
+  >
+    {{ roomTemps["bedroom"].activeTemp }}°C
+  </tui-arc-chart>
+  <a [routerLink]="['/temps', 'bedroom']">
+    <tui-svg src="tuiIconExternalLinkLarge"></tui-svg>
+  </a>
+</section>

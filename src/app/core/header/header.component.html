@@ -1,0 +1,13 @@
+<header>
+  <tui-app-bar>
+    <button
+      tuiAppBarBack
+      tuiSlot="left"
+      (click)="back()"
+      [ngStyle]="{ opacity: isHome ? 0 : 1 }"
+    >
+      Zurück
+    </button>
+    {{ pageTitle }}
+  </tui-app-bar>
+</header>

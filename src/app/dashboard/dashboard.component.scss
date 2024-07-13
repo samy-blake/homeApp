@@ -1,0 +1,39 @@
+.chart-section {
+  padding: 20px;
+  text-align: center;
+  position: relative;
+
+  header {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  .chart {
+    margin: 20px auto 0px;
+    > * {
+      margin: 0 auto;
+    }
+
+    &.temperatur {
+      --tui-chart-0: var(--tui-support-01);
+      --tui-chart-1: var(--tui-support-02);
+      --tui-chart-2: var(--tui-support-03);
+    }
+  }
+
+  .badges {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .support-livingroom {
+    background-color: var(--tui-support-01);
+  }
+  .support-office {
+    background-color: var(--tui-support-02);
+  }
+  .support-bedroom {
+    background-color: var(--tui-support-03);
+  }
+}

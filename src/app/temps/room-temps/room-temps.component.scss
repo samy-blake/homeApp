@@ -8,15 +8,16 @@
     font-weight: bold;
   }
 
-  tui-arc-chart {
+  .chart {
     margin: 20px auto 0px;
+    > * {
+      margin: 0 auto;
+    }
   }
+}
 
-  a {
-    position: absolute;
-    z-index: inherit;
-    bottom: 20px;
-    right: 20px;
-    color: inherit;
-  }
+.axes {
+  height: 12.5rem;
+  width: 100%;
+  color: #bc71c9;
 }
